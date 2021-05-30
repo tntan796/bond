@@ -14,7 +14,7 @@ router.get('/', async function (req, res, next) {
     method: 'get',
     url: `https://wmuat.kss.com.vn/getFile.kss?date=${date}&file=${file}`,
     headers: {
-      'Cookie': `JSESSIONID=${session}.node0;Path=/; JSESSIONID=${session}.node0`,
+      'Cookie': `${session}`,
       'Accept': 'application/json'
     },
     responseType: 'stream',
