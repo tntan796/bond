@@ -9,10 +9,10 @@ axios.defaults.httpsAgent = new https.Agent({
 
 /* GET home page. */
 router.get('/', async function (req, res, next) {
-  const {date, file, session} = req.query;
+  const {baseUrl, date, file, session} = req.query;
   var config = {
     method: 'get',
-    url: `https://wmuat.kss.com.vn/getFile.kss?date=${date}&file=${file}`,
+    url: `${baseUrl}/getFile.kss?date=${date}&file=${file}`,
     headers: {
       'Cookie': `${session}`,
       'Accept': 'application/json'
