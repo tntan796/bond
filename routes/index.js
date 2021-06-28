@@ -12,7 +12,7 @@ router.get('/', async function (req, res, next) {
   const {baseUrl, date, file, session} = req.query;
   var config = {
     method: 'get',
-    url: `${baseUrl}/getFile.kss?date=${date}&file=${file}`,
+    url: `${baseUrl}?date=${date}&file=${file}`,
     headers: {
       'Cookie': `${session}`,
       'Accept': 'application/json'
